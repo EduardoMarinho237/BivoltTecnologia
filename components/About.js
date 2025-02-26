@@ -21,23 +21,50 @@ export default function About() {
             A <strong>Bivolt Tecnologia</strong> é uma empresa focada em simplicidade e qualidade. Buscamos sempre compreender o objetivo do cliente e <strong>desenvolver soluções rápidas de fácil aplicação</strong>.
           </p>
           <img
-            src="/images/notebook.webp"
+            src="/images/notebook.png"
             alt="Notebook"
             className="max-w-[300px] h-auto rounded-lg" 
           />
         </div>
       </div>
 
-      <div className="mt-8 w-full rounded-2xl">
+      <div className="mt-8 w-full rounded-2xl overflow-hidden">
         <Slider {...settings}>
-          <div className="px-2">
-            <img src="/images/imagem1.avif" alt="Imagem 1" className="w-full rounded-2xl" />
+          <div className="relative px-2 group">
+            <div className="relative overflow-hidden rounded-2xl">
+              <img
+                src="/images/imagem1.jpg"
+                alt="Idealização"
+                className="w-full h-auto transition-transform duration-300 ease-in-out transform group-hover:scale-110" 
+              />
+              <div className="absolute inset-0 bg-blue-600 opacity-20 transition-opacity duration-300 rounded-2xl"></div> 
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-blue-600 to-transparent rounded-2xl"></div>
+              <h2 className="absolute left-4 bottom-4 text-white text-xl font-bold">Idealização</h2>
+            </div>
           </div>
-          <div className="px-2">
-            <img src="/images/imagem2.avif" alt="Imagem 2" className="w-full rounded-2xl" />
+          <div className="relative px-2 group">
+            <div className="relative overflow-hidden rounded-2xl">
+              <img
+                src="/images/imagem2.jpg"
+                alt="Inovação"
+                className="w-full h-auto transition-transform duration-300 ease-in-out transform group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-blue-600 opacity-20 transition-opacity duration-300 rounded-2xl"></div> 
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-blue-600 to-transparent rounded-2xl"></div> 
+              <h2 className="absolute left-4 bottom-4 text-white text-xl font-bold">Inovação</h2> 
+            </div>
           </div>
-          <div className="px-2">
-            <img src="/images/imagem3.avif" alt="Imagem 3" className="w-full rounded-2xl" />
+          <div className="relative px-2 group">
+            <div className="relative overflow-hidden rounded-2xl">
+              <img
+                src="/images/imagem3.jpg"
+                alt="Colaboração com cliente"
+                className="w-full h-auto transition-transform duration-300 ease-in-out transform group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-blue-600 opacity-20 transition-opacity duration-300 rounded-2xl"></div> 
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-blue-600 to-transparent rounded-2xl"></div> 
+              <h2 className="absolute left-4 bottom-4 text-white text-xl font-bold">Colaboração com cliente</h2> 
+            </div>
           </div>
         </Slider>
       </div>
