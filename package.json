@@ -1,5 +1,5 @@
 {
-  "name": "wings-tecnologia",
+  "name": "bivolt-tecnologia",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,9 @@
   "dependencies": {
     "next": "15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-scroll": "^1.9.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
