@@ -17,7 +17,7 @@ export default function Services() {
           <div className="p-8 border rounded-lg shadow-lg flex flex-col items-center transition-transform duration-300 ease-in-out hover:transform hover:scale-105 hover:opacity-100 opacity-70">
             <i className="fa-5x fa-solid fa-mobile-screen mb-4 text-blue-600"></i>
             <h3 className="text-2xl mt-8 font-semibold">Desenvolvimento de apps</h3>
-            <p className="mt-2 text-gray-700">Criamos apps para dispositívos móveis como celulares, tablets, etc.</p>
+            <p className="mt-2 text-gray-700">Criamos apps para dispositivos móveis como celulares, tablets, etc.</p>
           </div>
         </div>
       </div>
