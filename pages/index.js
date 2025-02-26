@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <div>
       <Head>
+        <meta name="description" content="Bivolt Tecnologia oferece soluções personalizadas para suas necessidades em desenvolvimento de software."></meta>
         <title>Bivolt Tecnologia - Soluções em Software</title>
       </Head>
       <Header />
