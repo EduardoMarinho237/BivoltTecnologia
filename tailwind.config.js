@@ -8,7 +8,7 @@ module.exports = {
     },
     colors: {
       blue: {
-        600: '#09004f', // Substitui a cor blue-600 pela nova cor
+        600: '#09004f', 
       },
     },
   } },

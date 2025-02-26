@@ -13,6 +13,7 @@ export default function Contact() {
   return (
     <section id="contact" className="min-h-[80vh] flex items-center justify-center bg-gray-200 pt-16">
       <div className="max-w-md text-center">
+        <i className="fa-5x fa-solid fa-handshake mb-4 text-blue-600"></i>
         <h2 className="text-4xl font-bold text-blue-600">Entre em contato consoco</h2>
         <p className="mt-4 text-gray-700">Conecte-se conosco através das nossas redes sociais ou envie um e-mail!</p>
         <div className="mt-6 flex justify-center space-x-4">
