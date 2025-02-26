@@ -5,7 +5,7 @@ export default function Contact() {
   const [copied, setCopied] = useState(false);
 
   const handleEmailCopy = () => {
-    navigator.clipboard.writeText('example@example.com');
+    navigator.clipboard.writeText('edu.docxl@gmail.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000); 
   };
@@ -16,7 +16,7 @@ export default function Contact() {
         <h2 className="text-4xl font-bold text-blue-600">Entre em contato consoco</h2>
         <p className="mt-4 text-gray-700">Conecte-se conosco através das nossas redes sociais ou envie um e-mail!</p>
         <div className="mt-6 flex justify-center space-x-4">
-          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-green-600 text-white p-3 rounded hover:bg-green-700">
+          <a href="https://wa.me/5581991007965" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-green-600 text-white p-3 rounded hover:bg-green-700">
             <FaWhatsapp className="mr-2" /> WhatsApp
           </a>
           <button onClick={handleEmailCopy} className="flex items-center justify-center bg-blue-600 text-white p-3 rounded hover:bg-blue-700">
