@@ -12,6 +12,7 @@ export default function Header() {
     <header className="w-full bg-white shadow-md fixed top-0 z-10">
       <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex justify-between items-center">
+              <i class="fa-solid fa-bolt text-blue-600"></i>
               <h1 className="text-2xl font-bold text-blue-600">Bivolt</h1>
               <h1 className="text-2xl font-base text-blue-600">Tecnologia</h1>
         </div>
