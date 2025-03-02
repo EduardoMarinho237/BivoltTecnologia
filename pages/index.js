@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
+    
     <div>
       <Head>
         <meta name="description" content="Bivolt Tecnologia oferece soluções personalizadas para suas necessidades em desenvolvimento de software."></meta>

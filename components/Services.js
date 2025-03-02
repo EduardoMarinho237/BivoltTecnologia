@@ -1,26 +1,125 @@
+import { useState, useEffect } from "react";
+
 export default function Services() {
+  const [selectedPlan, setSelectedPlan] = useState("anual");
+
+  const plans = [
+    {
+      id: "trimestral",
+      icon: "fa-calendar-alt",
+      title: "Plano Trimestral",
+      description: "Equilíbrio entre custo e flexibilidade.",
+      totalPrice: "R$898,80/ano", 
+      monthlyPrice: "R$74,90/mês", 
+      features: [
+        "Melhor custo-benefício a curto prazo",
+        "Taxa mínima no cancelamento"
+      ]
+    },
+    {
+      id: "anual",
+      icon: "fa-calendar-check",
+      title: "Plano Anual",
+      description: "Economize mais com o plano anual.",
+      totalPrice: "R$718,80/ano", 
+      monthlyPrice: "R$59,90/mês", 
+      features: [
+        "Desconto especial de 15%",
+        "Suporte premium 24/7",
+        "Alterações bimestrais grátis*"
+      ]
+    },
+    {
+      id: "mensal",
+      icon: "fa-calendar-day",
+      title: "Plano Mensal",
+      description: "Flexibilidade total! Assine e cancele a qualquer momento.",
+      totalPrice: "R$1.319,90/ano", 
+      monthlyPrice: "R$109,90/mês", 
+      features: [
+        "Pagamento mensal recorrente"
+      ]
+    }
+  ];
+
+  useEffect(() => {
+    setSelectedPlan("anual");
+  }, []);
+
   return (
-    <section id="services" className="min-h-[80vh] bg-white pt-16 flex items-center justify-center">
-      <div className="max-w-7xl mx-auto text-center text-blue-600">
-        <h2 className="text-4xl font-bold">Nossos Serviços</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-          <div className="p-8 border rounded-lg shadow-lg flex flex-col items-center transition-transform duration-300 ease-in-out hover:transform hover:scale-105 hover:opacity-100 opacity-70">
-            <i className="fa-5x fa-solid fa-gears mb-4 text-blue-600"></i>
-            <h3 className="text-2xl mt-8 font-semibold">Manutenção em sistemas</h3>
-            <p className="mt-2 text-gray-700">Fazemos manutenção em sistemas PHP que utilizam frameworks conhecidos como laravel, codeiginiter e zend.</p>
-          </div>
-          <div className="p-8 border rounded-lg shadow-lg flex flex-col items-center transition-transform duration-300 ease-in-out hover:transform hover:scale-105 hover:opacity-100 opacity-70">
-            <i className="fa-5x fa-solid fa-globe mb-4 text-blue-600"></i>
-            <h3 className="text-2xl mt-8 font-semibold">Desenvolvimento de sites</h3>
-            <p className="mt-2 text-gray-700">Desenvolvemos sites institucionais, blogs, landing pages e diversos outros tipos de aplicações web dinâmicas e interativas.</p>
-          </div>
-          <div className="p-8 border rounded-lg shadow-lg flex flex-col items-center transition-transform duration-300 ease-in-out hover:transform hover:scale-105 hover:opacity-100 opacity-70">
-            <i className="fa-5x fa-solid fa-mobile-screen mb-4 text-blue-600"></i>
-            <h3 className="text-2xl mt-8 font-semibold">Desenvolvimento de apps</h3>
-            <p className="mt-2 text-gray-700">Criamos apps para dispositivos móveis como celulares, tablets, etc.</p>
+    <>
+      <style>
+        {`
+          @tailwind base;
+          @tailwind components;
+          @tailwind utilities;
+        `}
+      </style>
+
+      <section id="services" className="min-h-[80vh] bg-gray-100 py-16 flex flex-col items-center">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-blue-600">Nossos Planos</h2>
+          <p className="text-gray-600 mt-4">Escolha o melhor plano para o seu negócio</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            {plans.map((plan) => (
+              <div
+                key={plan.id}
+                className={`relative p-8 border rounded-xl shadow-lg flex flex-col items-center cursor-pointer transition-all duration-300 transform hover:scale-105 hover:shadow-xl 
+                  ${selectedPlan === plan.id ? "border-blue-500 shadow-blue-500/50" : "border-gray-300 opacity-70"}`}
+                onClick={() => setSelectedPlan(plan.id)}
+              >
+                {plan.id === "anual" && (
+                  <div className="absolute -top-3 right-4 bg-gradient-to-r from-red-600 to-red-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center space-x-2">
+                    <i className="fa-solid fa-clock"></i>
+                    <span>Oferta por tempo limitado!</span>
+                  </div>
+                )}
+
+                <div className="flex items-center space-x-4 mb-4">
+                  <i className={`fa-2x fa-solid ${plan.icon} text-blue-600`}></i>
+                  <h3 className="text-2xl font-semibold text-blue-600">{plan.title}</h3>
+                </div>
+                <p className="mt-4 text-gray-600 text-center">{plan.description}</p>
+
+                <p className="mt-4 text-sm text-gray-500">
+                  {plan.totalPrice}
+                </p>
+
+                <p className="mt-2 text-3xl font-bold text-blue-600">
+                  {plan.monthlyPrice}
+                </p>
+
+                {plan.id === "anual" && (
+                  <p className="mt-2 text-sm text-green-600 font-semibold">
+                    Economize R$601,10 por ano!
+                  </p>
+                )}
+
+                <ul className="mt-6 text-left space-y-2 pl-6">
+                  {plan.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-gray-700">
+                      <i className="fa fa-check-circle mr-2 text-green-500"></i>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <div
+                  className={`mt-6 w-full transition-all duration-500 ease-in-out ${
+                    selectedPlan === plan.id
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4 pointer-events-none"
+                  }`}
+                >
+                  <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-bold w-full hover:from-blue-600 hover:to-blue-700 transition-all duration-700 ease-in-out">
+                    Escolher Plano
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
