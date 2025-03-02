@@ -61,7 +61,7 @@ export default function Services() {
 
       <section id="services" className="min-h-[80vh] bg-gray-100 py-16 flex flex-col items-center">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-5xl font-bold text-blue-600">Nossos Planos</h2>
+          <h2 className="text-4xl font-bold text-blue-600">Nossos Planos</h2>
           <p className="text-gray-600 mt-4">Escolha o melhor plano para o seu negócio</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
             {plans.map((plan) => (
@@ -84,7 +84,7 @@ export default function Services() {
                 </div>
                 <p className="mt-4 text-gray-600 text-center">{plan.description}</p>
 
-                <p className="mt-4 text-sm text-gray-500 line-through">
+                <p className="mt-4 text-sm text-gray-500">
                   {plan.totalPrice}
                 </p>
 
