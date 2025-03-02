@@ -8,26 +8,25 @@ export default function Services() {
       id: "trimestral",
       icon: "fa-calendar-alt",
       title: "Plano Trimestral",
-      description: "Equilíbrio entre custo e flexibilidade. Ideal para empresas em crescimento.",
-      totalPrice: "R$399,60/ano", 
-      monthlyPrice: "R$33,30/mês", 
+      description: "Equilíbrio entre custo e flexibilidade.",
+      totalPrice: "R$898,80/ano", 
+      monthlyPrice: "R$74,90/mês", 
       features: [
         "Melhor custo-benefício a curto prazo",
-        "Flexibilidade para ajustar conforme necessário",
-        "Cancelamento simples"
+        "Taxa mínima no cancelamento"
       ]
     },
     {
       id: "anual",
       icon: "fa-calendar-check",
       title: "Plano Anual",
-      description: "Economize mais com o plano anual. Perfeito para empresas consolidadas.",
-      totalPrice: "R$299,90/ano", 
-      monthlyPrice: "R$24,99/mês", 
+      description: "Economize mais com o plano anual.",
+      totalPrice: "R$718,80/ano", 
+      monthlyPrice: "R$59,90/mês", 
       features: [
         "Desconto especial de 15%",
         "Suporte premium 24/7",
-        "Maior estabilidade financeira"
+        "Alterações bimestrais grátis*"
       ]
     },
     {
@@ -35,12 +34,10 @@ export default function Services() {
       icon: "fa-calendar-day",
       title: "Plano Mensal",
       description: "Flexibilidade total! Assine e cancele a qualquer momento.",
-      totalPrice: "R$478,80/ano", 
-      monthlyPrice: "R$39,90/mês", 
+      totalPrice: "R$1.319,90/ano", 
+      monthlyPrice: "R$109,90/mês", 
       features: [
-        "Sem contratos longos",
-        "Pagamento mensal recorrente",
-        "Ideal para freelancers e startups"
+        "Pagamento mensal recorrente"
       ]
     }
   ];
@@ -94,7 +91,7 @@ export default function Services() {
 
                 {plan.id === "anual" && (
                   <p className="mt-2 text-sm text-green-600 font-semibold">
-                    Economize R$179,90 por ano!
+                    Economize R$601,10 por ano!
                   </p>
                 )}
 
